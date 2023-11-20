@@ -1,0 +1,20 @@
+@use "../../../styles/variables";
+@use "../../../styles/mixins";
+
+button.primary-btn {
+  border: 2px solid variables.$purple-dark100;
+  padding: 10px 22px;
+  background: variables.$purple-dark100;
+  border-radius: variables.$border-radius;
+  font-family: variables.$font-stack;
+  @include mixins.btn;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover:not(:disabled) {
+    background: variables.$purple-light100;
+    border: 2px solid variables.$purple-light100;
+  }
+}
