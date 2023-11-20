@@ -1,0 +1,80 @@
+@use "../../../../styles/variables";
+@use "../../../../styles/mixins";
+
+.showcase {
+  width: 100%;
+  height: calc(100dvh - 100px);
+  background: url(../../../../assets/images/Background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .showcase__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .showcase__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 30px;
+
+      .subtitle {
+        @include mixins.body3;
+
+        &:first-child {
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+      }
+
+      .title {
+        @include mixins.display;
+        font-weight: 500;
+      }
+    }
+
+    .search__bar {
+      margin-top: 60px;
+      background-color: white;
+      box-shadow: 0px 25px 75px 0px rgba(6, 7, 20, 0.1);
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      padding: 10px 16px;
+      border-radius: variables.$border-radius;
+      width: 100%;
+      max-width: 500px;
+
+      input,
+      select {
+        border: none;
+
+        &::placeholder {
+          color: variables.$grey-color100;
+        }
+      }
+
+      select {
+        min-width: 100px;
+      }
+
+      .img__container {
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

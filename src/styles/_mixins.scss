@@ -2,7 +2,7 @@
 
 @mixin display {
   font-size: 120px;
-  line-height: 76px;
+  line-height: 120px;
 }
 
 @mixin headline1 {
@@ -60,4 +60,10 @@
 @mixin body3 {
   font-size: 14px;
   line-height: 18px;
+}
+
+@mixin btn {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
 }
